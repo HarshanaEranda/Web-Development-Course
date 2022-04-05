@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <style>
+                  dt{
+                        font-weight:bolder;
+                        font-size: larger;
+                        font-style: oblique;
+                        color: #333                  }
+                  
+            </style>
+            <script>
+                  function Register(){
+                        var Id=document.getElementById("textId").value;
+                        var Name=document.getElementById("textName").value;
+                        var Price=document.getElementById("textPrice").value;
+                        var mfd=document.getElementById("textMfd").value;
+                        var yes=document.getElementById("optYes");
+                        var no=document.getElementById("optNo");
+                        if(yes.checked)
+                        stock=yes.value;
+                        if(no.checked)
+                        stock=no.value;
+                        var cities=document.getElementById("lstcity").value;
+                        document.getElementById("lblId").innerText=Id;
+                        document.getElementById("lblName").innerText=Name;
+                        document.getElementById("lblPrice").innerText=Price;
+                        document.getElementById("lblMfd").innerText=mfd;
+                        document.getElementById("IsStock").innerText=stock;
+                        document.getElementById("shipto").innerText=cities;
+                  }
+            </script>
+      </head>
+      <body>
+            <div>
+                  <form >
+                        <fieldset id="showRegister" >
+                              <legend>Register Product</legend>
+                              <dl >
+                                    <dt>Product Id</dt>
+                                    <dd><input type="number" min="1" max="10" id="textId"></dd>
+                                    <dt>Product Name</dt>
+                                    <dd><input type="text"  id="textName"></dd>
+                                    <dt>Product Price</dt>
+                                    <dd><input type="range" min="1000" max="10000" id="textPrice"></dd>
+                                    <dt>Product Manufactured</dt>
+                                    <dd><input type="date"  id="textMfd"></dd>
+                                    <dt>Is in stock</dt>
+                                    <dd><input type="radio" name="stock" value="Available" id="optYes">
+                                          <input type="radio" name="stock" value="OutOfStock" id="optNo">
+                                    </dd>
+                                    <dt>Ship Product</dt>
+                                    <dd>
+                                          <select id="lstcity">
+                                                <option value="Colombo">Colombo</option>
+                                                <option value="Kandy">Kandy</option>
+                                          </select>
+                                    </dd>
+                                    <br>
+                                    <input type="button" value="Register" onclick="Register()" style="background-color: cyan;">
+                              </dl>
+                        </fieldset>
+                        <br>
+                        <fieldset id="showDetails">
+                              <legend>Product Details </legend>
+                              <table width="400" border="2" align="center" style="background-color: blue; font-size:large">
+                                    <tr>
+                                          <td>Product Id</td>
+                                          <td id="lblId"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>Product Name</td>
+                                          <td id="lblName"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>Product Price</td>
+                                          <td id="lblPrice"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>Product Manufactured Date</td>
+                                          <td id="lblMfd"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>Is in stock</td>
+                                          <td id="IsStock"></td>
+                                    </tr>
+                                    <tr>
+                                          <td>shipped to</td>
+                                          <td id="shipto"></td>
+                                    </tr>
+                                    
+                              </table>
+
+                        </fieldset>
+                  </form>
+            </div>
+      </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script>
+            function getDetails(){
+                  document.getElementById("family").innerHTML=navigator.appName;
+                  document.getElementById("lang").innerHTML=navigator.language;
+                  document.getElementById("cookie").innerHTML=navigator.cookieEnabled;
+                  document.getElementById("agent").innerHTML=navigator.userAgent;
+                  for(var i=0;i<navigator.plugins.length;i++){
+                        document.getElementById("plug").innerHTML+=navigator.plugins[i].name+"<br>"
+                  }
+                  var msg=document.getElementById("msg");
+                  if(navigator.plugins["chrome pdf viewer"==undefined]){
+                        msg.innerHTML="no";
+                  }
+                  else{
+                        msg.innerHTML="yes";
+                  }
+            }
+      </script>
+</head>
+<body>
+      <div>
+            <input type="button" value="Get browser elment" onclick="getDetails()">?
+      </div>
+      <br>
+      <div>
+            <dl>
+                  <dt>Browser Family</dt>
+                  <dd id="family"></dd>
+                  <dt>Browser Language</dt>
+                  <dd id="lang"></dd>
+                  <dt>Cookie enabled</dt>
+                  <dd id="cookie"></dd>
+                  <dt>suppoted on</dt>
+                  <dd id="agent"></dd>
+                  <dt>pluging supported</dt>
+                  <dd id="pluging"></dd>
+                  <dt>can user view of documents?</dt>
+                  <dd id="msg"></dd>
+            </dl>
+      </div>
+</body>
+</html>

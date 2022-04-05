@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script>
+           var newwindow;
+            function viewLarge(){
+                  
+                 newwindow= window.open("B.jpg","bike","width=700px heigth=700px")
+            }
+            
+      </script>
+</head>
+<body>
+      <img src="B.jpg" width="300px" height="300px" ondblclick="viewLarge()">
+      <p>Double click on the image</p>
+      <input type="button" value="close" onclick="newwindow.close()">
+      <input type="button" value="print" onclick="window.print()">
+</body>
+</html>

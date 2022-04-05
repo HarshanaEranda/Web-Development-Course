@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script>
+                  function create()
+                  {
+                        var container=document.getElementById("container");
+                        var pic =new Image();
+                        pic.src="car.jpg";
+                        pic.width="200";
+                        pic.height="200";
+                        pic.border="2";
+                        container.appendChild(pic)
+                  }
+            </script>
+      </head>
+      <body>
+            <div>
+                <div id="container"></div>
+                <br>
+                <input type="button" value="create_image" onclick="create()"> 
+            </div>
+      </body>
+</html>

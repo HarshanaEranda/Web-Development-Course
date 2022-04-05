@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script>
+                  function f1(){
+                        var output=document.getElementById("output");
+                        var name="jone";
+                        var age=23;
+                        var IspermentRoll=true;
+                        var cities=["colombo","kandy"];
+                  var getDetails=function(a,b){
+                        return a+b;
+                  }
+                  var city=new Array("colombo","kandy");
+
+                  output.innerHTML="Datatype : <br>"+(typeof name)+"<br>"+(typeof age)+"<br>"+(typeof IspermentRoll)
+                  +"<br>"+(typeof citess)+"<br>"+typeof getDetails+"<br>"+"city is a instanceof Array : "+(city instanceof Array);
+                  }
+            </script>
+      </head>
+      <body onload="f1()"><div>
+          <h2> <div id="output"></div> </h2>
+           <!-- <input type="button" value="change" onclick="f1()"> -->
+      </div>
+      </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script>
+            function array(){
+                  var name=["shsi","harshana","eranda","kavishka"];
+                  name.splice(1,0,"gase","cabon");
+                  var name1=name.slice(0,6);
+                  document.getElementById("print").innerHTML=name1;
+                  
+            }array();
+      </script>
+</head>
+<body onload="array()">
+      <h1 id="print" ></h1>
+</body>
+</html>

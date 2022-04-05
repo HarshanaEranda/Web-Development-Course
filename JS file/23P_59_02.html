@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script>
+                  function submit1(){
+                        var java=document.getElementById("optjava");
+                        var net=document.getElementById("optdot");
+                        var python=document.getElementById("optpython");
+                        var msg=document.getElementById("msg");
+                        var course="";
+                        if(java.checked){
+                              course+=java.value+"<br>";
+                        }
+                        if(net.checked){
+                              course+=net.value+"<br>";
+                        }
+                        if(python.checked){ 
+                              course+=python.value+"<br>";
+                        }
+                        msg.innerHTML="Selected courses Diploma  "+"<br>"+course;
+                  }
+            </script>
+      </head>
+      <body>
+            <div>
+                  <fieldset>
+                        <legend>Select course</legend>
+                        <ul>
+                              <li>
+                                    <input type="checkbox" id="optjava" value="java">Java
+                              </li>
+                              <li>
+                                    <input type="checkbox" id="optdot" value="dotnet">Dotnet
+                              </li>
+                              <li>
+                                    <input type="checkbox" id="optpython" value="python">Python
+                              </li>
+                        </ul>
+                       <br>
+                       <input type="button" value="submit" onclick="submit1()">
+                  </fieldset>
+                  <br>
+                  <div align="center" id="msg">
+                  </div>
+            </div>
+      </body>
+</html>

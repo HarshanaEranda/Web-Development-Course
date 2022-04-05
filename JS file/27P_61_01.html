@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script>
+                  function selectharddisk(){
+                      var IsHdd=document.getElementById("IsHdd") ; 
+                      var txtRam=document.getElementById("txtRam");
+                      if (parseInt(IsHdd.value)>=5){
+                              txtRam.disabled=false;
+                              IsHdd.disabled=true;
+                      }
+                  }
+                  function selectram(){
+                        var txtRam=document.getElementById("txtRam");
+                        var IsGrapic=document.getElementById("IsGrapic");
+                        if(txtRam.value>=4){
+                              IsGrapic.disabled=false;
+                              txtRam.disabled=true;
+                        }
+                  }
+                  function selectGrapic(){
+                        var IsGrapic=document.getElementById("IsGrapic");
+                        var btnInstall=document.getElementById("btnInstall");
+                        if(IsGrapic.value=="yes"){
+                              btnInstall.disabled=false;
+                              IsGrapic.disabled=true;
+                        }
+                  
+                  }
+                  function install(){
+                        document.write("Game install successfully");
+                  }
+            </script>
+      </head>
+      <body>
+            <div>
+                  <fieldset>
+                        <legend>Install game</legend>
+                              <dl>
+                                    <dt>select available hard disk</dt>
+                                    <dd>
+                                       <select id="IsHdd" onchange="selectharddisk()">
+                                             <option value="2">2GB</option>
+                                             <option value="5">5GB</option>
+                                             <option value="10">10GB</option>
+                                       </select>   
+                                    </dd>
+                                    <dt>select available ram</dt>
+                                     <dd>
+                                           <input type="number" min="1" max="8" value="1" id="txtRam" disabled onchange="selectram()">       
+                                     </dd> 
+                                     <dt>Is Grapic card Availabe</dt>    
+                                     <dd>
+                                           <select id="IsGrapic" disabled onchange="selectGrapic()">
+                                                 <option value="yes">Yes</option>
+                                                 <option value="no">No</option>
+                                           </select>
+                                     </dd>
+                                     <br>
+                                     <input type="button" id="btnInstall" value="install" disabled onchange="install()">
+                              </dl>
+                        
+                  </fieldset>
+            </div>
+      </body>
+</html>

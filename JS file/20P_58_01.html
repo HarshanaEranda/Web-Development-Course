@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script>
+                   function f1(){
+                         var product={
+                               Id : 1 ,
+                               Name: "Bike",
+                               price :20000,
+                               IsInStock:false,
+                               quantity:3,
+                               shipTo : ["colombo","hambanthota"],
+                               Total : function(){
+                                     return product.quantity*product.price;
+                               }}
+                               if(product.IsInStock==true){
+                                    stock="stock is available";
+                               }
+                               else{
+                                     stock="out of stock"
+                               }
+                               document.write("Id : "+product.Id+"<br>Name : "+product.Name+"<br>Price : "+product.price+"<br> Is in stock : "+stock+"<br> Ship to : "+product.shipTo+
+                               "<br>Total Amount : "+product.Total());
+
+                         }f1();
+                   
+            </script>
+      </head>
+      <body>
+
+      </body>
+</html>

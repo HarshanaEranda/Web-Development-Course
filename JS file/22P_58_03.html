@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script>
+                  function verifyPassword(){
+                        var pwd=document.getElementById("txtpwd").value;
+                        var msg=document.getElementById("msg");
+                        var grade=document.getElementById("grade");
+                        function showgrade(min,max,value,low,high){
+                              grade.min=min;
+                              grade.max=max;
+                              grade.value=value;
+                              grade.low=low;
+                              grade.high=high;       
+                        }
+                        var regExp=/(?=.*[A-Z])\w{4,15}/;
+                        if(pwd.match(regExp)){
+                              msg.innerHTML="Strong Password";
+                              showgrade(1,100,100,0,0);
+                        }
+                        else{
+                              if(pwd.length<4){
+                                    msg.innerHTML="poor password";
+                                    showgrade(1,100,100,60,80);
+                              }
+                              else{
+                                    msg.innerHTML="Weak Password";
+                                    showgrade(1,100,100,40,80);
+                              }
+                        }
+                  }
+            </script>
+      </head>
+      <body>
+            <div>
+            <fieldset>
+                  <legend>Password</legend>
+                  <input type="password" id="txtpwd" onkeyup="verifyPassword()">
+                  <meter min="1" max="100" value="0" low="0" high="0" id="grade"></meter>
+                  <span id="msg"></span>
+            </fieldset>
+            </div>
+      </body>
+</html>

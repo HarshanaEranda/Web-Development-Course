@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .style {
+                  width: 500px;
+                  height: 300px;
+                  top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      box-sizing: border-box;
+      padding: 70px 30px;
+      background-color: blue;
+      font-size: 30px;
+      color: white;
+
+            }
+      </style>
+      <script>
+            function bodyload(){
+                  var name1=prompt("Enter your name");
+                  var days=["monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+                  var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+                  var now=new Date;
+                  var Weekday=now.getDay(); 
+                  var day=now.getDate(); 
+                  var month=now.getMonth();
+                  var year=now.getFullYear();
+                  var hour=now.getHours();
+                  var minutes=now.getMinutes();
+                  var seconds=now.getSeconds();    
+                  var today=hour+":"+minutes+":"+seconds+":"+"  "+days[Weekday] +"  "+day+"  "+months[month] +"  "+year;  
+                  
+                  document.getElementById("msg").innerHTML=today;
+                  document.getElementById("uname").innerHTML="Hello "+name1;
+                  var pic=getElementById("pic");
+                  
+                  var hour=now.getHours()
+                  if(hour>=5 && hour<12){
+                        pic.src="A.jpg";
+                  }
+                  else if(hour>=12 && hour<17){
+                        pic.src="B.jpg";
+                  }
+                 else if(hour>=17 && hour<23){
+                        pic.src="B.jpg";
+                  }
+                 
+            
+            
+            
+            }
+      </script>
+</head>
+<body onload="bodyload()">
+      
+      <div align="center"class="style">
+            <div align="center" id="uname" ></div>
+            <div id="msg" align="center"></div>
+            <br><br>
+            
+            <img src="A.jpg" id="pic" width="200px" height="200px">
+            
+      </div>
+</body>
+</html>

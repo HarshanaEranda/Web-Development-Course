@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script>
+            function GetDetails(){
+                  document.getElementById("details").style.display="block";
+                  document.getElementById("host").innerHTML=location.host;
+                  var msg=" ";
+                  switch(location.protocol){
+                        case "http:":
+                        msg="page accesssed from server and secued";
+                        break;
+                        case "file:":
+                        msg="page is not access from server";
+                        break;
+                                    }
+                  document.getElementById("protocol").innerHTML=location.protocol+"<br>"+msg;
+                  document.getElementById("url").innerHTML=location.href;
+            }
+      </script>
+      <style>
+            dt{
+                  background-color: greenyellow;
+                  font-weight: bold;
+            }
+      </style>
+</head>
+<body>
+      <div align="center">
+            <input type="button" value="Get client loaction" onclick="GetDetails()">
+            <input type="button" value="Refresh" onclick="location.reload()">
+      </div>
+      <div id="details" style="display: none;">
+            <dl>
+                  <dt>sever name/IP Address</dt>
+                  <dd id="host"></dd>
+                  <dt>protocol</dt>
+                  <dd id="protocol"></dd>
+                  <dt>url</dt>
+                  <dd id="url"></dd>
+            </dl>
+      </div>
+</body>
+</html>

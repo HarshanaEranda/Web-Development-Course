@@ -1,0 +1,39 @@
+<!DOCTYPE html>>
+<html>
+      <head>
+            <script>
+                  var product=["A.jpg","B.jpg","C.jpg"];
+                  var count=0
+                  function previousClick(){
+                        pic=document.getElementById("pic");
+                        count--;
+                        pic.src=product[count];
+                  }
+                  function nextClick(){
+                        pic=document.getElementById("pic");
+                        count++;
+                        pic.src=product[count];
+                  }
+            </script>
+      </head>
+      <body>
+            <div>
+                  <table width="600" border="2" cellspacing="5" align="center">
+                        <tr>
+                              <td>
+                              <input type="button" value="previous" onclick="previousClick()">
+                              </td>
+                              
+                              <td>
+                                    <img src="car.jpg" id="pic" width="400" height="400">
+                              </td>
+                              <td>
+                                    <input type="button" value="next" onclick="nextClick()">
+                              </td>
+                        </tr>
+                       
+                        
+                  </table>
+            </div>
+      </body>
+</html>

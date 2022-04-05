@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script>
+                  //=====================================================================================
+                  //function array1(){
+                      //  document.write("=====================================================================================");
+                      ///  var product=[1,"Samsum",20000.00,true];
+                       // document.write("Id : "+product[0]+"<br> Product Name : "+product[1]+"<br> Product Price "+product[2]);
+                       // document.write("======================================================================================");
+                       // }array1();
+                        function array2()
+                        {
+                              var ImageName=["Bike1","Bike2","Bike3","Bike4"];
+                              var ImageId=["A.jpg","B.jpg","C.jpg","D.jpg"];
+                              var prodName=document.getElementById("ProName");
+                              var pic=document.getElementById("pic");
+                              var txtRange1=document.getElementById("txtRange");
+                              prodName.innerHTML=ImageName[txtRange1.value];
+                              pic.src=ImageId[txtRange1.value];
+
+                        }
+            </script>
+      </head>
+      <body>
+            <div>
+                  <table width="400" border="2" cellspacing="5" cellpadding="5" align="center">
+                        <tr>
+                              <td align="center" id="ProName"></td>
+                              
+                        </tr>
+                        <tr>
+                              
+                              <td>
+                                    <img id="pic" src="" width="500" height="500">
+                              </td>
+                        </tr>
+                        <tr>
+                              <td>
+                                    <input type="range" id="txtRange" min="0" max="3" value="0" onchange="array2()">
+                              </td>
+                        </tr>
+                  </table>
+            </div>
+
+      </body>
+</html>

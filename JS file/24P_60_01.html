@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script>
+                  function login(){
+                        var Uname=document.getElementById("txtName").value.trim();// trim() key word remove the white space
+                        //trimStart(),trimEnd()
+                      //  document.write(Uname);
+                        var pwd=document.getElementById("txtpwd").value;//.trim();
+                        var msg =document.getElementById("msg");
+                        var userDetails={userName:'Jone',password:'admin'};
+                       // (Uname==userDetails.userName && pwd==userDetails.password) ? document.write("Login success") : msg.innerHTML="Invalid username/password ";
+                      // document.write(Uname==userDetails.userName);
+                       console.log(typeof(userDetails.userName));
+                       console.log(pwd.normalize() === userDetails.password.normalize());
+                       if (Uname === userDetails.userName && pwd==userDetails.password){
+                              document.write("Login success");
+                        }
+                        else{
+                              msg.innerHTML="Invalid username/password";
+                        }
+                  }
+            </script>
+
+      </head>
+      <body>
+            <div>
+                  <fieldset>
+                        <legend>Login</legend>
+                       <dl>
+                             <dt>UserName</dt>
+                             <dd><input type="text" id="txtName"></dd>
+                             <dt>Password</dt>
+                             <dd><input type="password" id="txtpwd"></dd>
+                              <br>
+                              <input type="button" value="login" onclick="login()">
+                       </dl>
+                  </fieldset>
+                  <div align="center" >
+                        <h2 id="msg"></h2>
+                  </div>
+            </div>
+      </body>
+</html>

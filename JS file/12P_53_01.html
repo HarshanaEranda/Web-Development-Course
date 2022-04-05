@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script>
+                  function RegisterClick(){
+                      any= document.getElementById("textname").value;
+                       msg= document.write("Hello "+any);
+                  }
+            </script>
+      </head>
+      <body>
+            <form>
+                  Enter name:
+                  <input type="text" id="textname">
+                  <input type="button" value="register" onclick="RegisterClick()">
+            </form>
+            <br>
+            <div align="center" id="msg"></div>
+      </body>
+</html>

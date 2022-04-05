@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script>
+            function submitclick(){
+                  var userdetails={username:"john",pin:405,otp:2345};
+                  var txtName=document.getElementById("txtName").value;
+                  var txtCode=document.getElementById("txtcode").value;
+                  var msg=document.getElementById("msg");
+                  if (userdetails.username==txtName){
+                        if(userdetails.pin==txtCode){//userdetails.txtCode
+                              msg.innerHTML="pin verified"
+                        }
+                        else if(userdetails.otp==txtCode){
+                              msg.innerHTML="otp verified";
+                        }
+                        else{
+                              msg.innerHTML="Invalid otp"
+                        }
+                  }
+                  else{
+                        msg.innerHTML="Invalid Username";
+                  }
+            }
+      </script>
+</head>
+<body>
+      <div>
+            <fieldset>
+                  <legend>Payment</legend>
+                  <dl>
+                        <dt>Name on card</dt>
+                        <dd>
+                              <input type="text" id="txtName">
+                        </dd>
+                        <dt>Pin/Otp</dt>
+                        <dd>
+                              <input type="text" id="txtcode" placeholder="You can use your otp" >
+                        </dd>
+                  </dl>
+            </fieldset>
+            <input type="button" value="submit" onclick="submitclick()">
+            <br>
+            <div align="center" id="msg">
+
+            </div>
+      </div>
+</body>
+</html>

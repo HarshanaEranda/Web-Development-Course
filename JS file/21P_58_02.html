@@ -1,0 +1,57 @@
+<!DOCTYPE html>.
+<html>
+      <head>
+            <script>
+                  function productShow(){
+                        var product=[
+                              {Id:1,Name:"Bike 1",price:20000,photo:"A.jpg"},
+                              {Id:2,Name:"Bike 2",price:30000,photo:"B.jpg"},
+                              {Id:3,Name:"Bike 3",price:40000,photo:"C.jpg"},
+                              {Id:4,Name:"Bike 4",price:50000,photo:"D.jpg"}
+                        
+                        ];
+                        var pic=document.getElementById("pic");
+                        var txtRange=document.getElementById("txtRange");
+                        var productId=document.getElementById("prodId");
+                        var productName=document.getElementById("prodName");
+                        var productPrice=document.getElementById("prodPrice");
+                        pic.src=product[txtRange.value].photo;
+                        productId.innerHTML=product[txtRange.value].Id;
+                        productName.innerHTML=product[txtRange.value].Name;
+                        productPrice.innerHTML=product[txtRange.value].price;
+                        
+                  }
+            </script>
+      </head>
+      <body>
+            <div>
+                  <table width="500" cellpadding="4" cellspacing="4" border="2" align="center">
+                        <tr>
+                              <td>
+                                    <img src="car.jpg" id="pic" width="200" height="200">
+                              </td>
+                        </tr>
+                        <tr>
+                              <td>productId</td>
+                              <td id="prodId"></td>
+                        </tr>
+                        <tr>
+                              <td>productName</td>
+                              <td id="prodName"></td>
+                        </tr>
+                        <tr>
+                              <td>productPrice</td>
+                              <td id="prodPrice"></td>
+                        </tr>
+                        <tr>
+                              <td>
+                                    <input type="range" id="txtRange" min="0" max="3" value="0" onchange="productShow()">    
+                              </td>
+                        </tr>
+                  </table>
+                  <!-- <div>
+                        <input type="range" id="txtRange" min="0" max="3" value="0" onchange="productShow()">
+                  </div> -->
+            </div>
+      </body>
+      </html>
